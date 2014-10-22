@@ -30,4 +30,9 @@ public class CitiesController {
     public Page<City> search(@RequestParam("name") String name, Pageable pageable) {
         return repository.findByNameContainsIgnoreCase(name, pageable);
     }
+
+    @RequestMapping(value = "/version", method = RequestMethod.GET)
+    public String version() {
+        return System.getenv("VERSION");
+    }
 }

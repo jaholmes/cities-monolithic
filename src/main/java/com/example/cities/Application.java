@@ -16,7 +16,7 @@ import com.example.cities.resources.CityResourceAssembler;
 @ComponentScan
 @EnableAutoConfiguration
 @EnableSpringDataWebSupport
-//@EnableJpaRepositories
+@EnableJpaRepositories
 public class Application {
 
     public static void main(String[] args) {

@@ -29,7 +29,8 @@
             <th>Map</th>
         </thead>
         <tbody>
-        <tr ng-repeat="city in pagedCities.content">
+        <!--works when app is run locally! not in CF: <tr ng-repeat="city in pagedCities.content">-->        
+        <tr ng-repeat="city in pagedCities._embedded.cityResources">
             <td width="15%">{{city.postalCode}}</td>
             <td width="30%">{{city.name}}</td>
             <td width="30%">{{city.county}}</td>
